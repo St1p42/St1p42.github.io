@@ -1,0 +1,96 @@
+html  {
+    font-size: 4px;
+    --font-size-xs: 2rem;
+    --font-size-s: 2.5rem;
+    --font-size-m: 3.5rem;
+    --font-size-l: 4.5rem;
+    --figure-size: 11.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(10, 10vw);
+    grid-template-columns: repeat(10, 10vw);
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px rgb(0, 0, 0) solid;
+}
+
+.black {
+    background-color: goldenrod;
+}
+
+.white {
+    background-color: bisque;
+}
+.coordinateX {
+    display: flex;
+    justify-content: center;
+}
+
+.lower {
+    align-items: start;
+    margin-top: 10px;
+}
+
+.upper {
+    align-items: end;
+    margin-bottom: 10px;
+}
+
+
+.coordinateY {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left {
+    align-items: flex-end;
+    margin-right: 15px;
+}
+
+.right {
+    align-items: flex-start;
+    margin-left: 15px;
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(14, 30, 135);
+    border-radius: 50%;
+    border-color: black;
+    border: 3px;
+}
+
+.circle {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    background-color: rgb(14, 30, 135);
+    opacity: 0.2;
+    border-radius: 50%;
+    border-color: black;
+    border: 10px;
+}
+
+@media screen and (min-width: 1000px) and (max-height: 850px){
+    .grid-container {
+        display: grid;
+        grid-template-rows: repeat(10, 10vh);
+        grid-template-columns: repeat(10, 10vh);
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: repeat(10, 10vh);
+        grid-template-columns: repeat(10, 10vh);
+    }
+}
